@@ -53,3 +53,40 @@
 //     return 'This is student details';
 // }
 
+
+// //type alias
+// type Employee={
+//     id:number,
+//     name: string,
+// }
+
+
+// let newEmployee : Employee= {
+//     id:1,
+//     name:'Nato Das',
+// };
+
+
+
+//Narrowing
+function bodyDetails( weight: string | number): number {
+        if(typeof weight==='number')
+        return weight*2;
+        else 
+        return parseInt(weight)*2.2;
+    }
+
+//
+type studentDetails ={
+    id: number,
+    name:string,
+    phone:string
+}
+
+let newStudentDetails : studentDetails = {
+        id : 12,
+        name : 'nato',
+        phone: 'ui489438943'
+};
+
+newStudentDetails.name='skjfhkjf';
