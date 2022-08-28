@@ -38,13 +38,18 @@
 // }
 
 
-//Object
-let familyDetails:{
-    id:number,
-    name: string
-}={
-    id:1,
-    name:'Nato Das'
-};
+// //Object
+// let familyDetails:{
+//     id:number,
+//     name: string
+// }={
+//     id:1,
+//     name:'Nato Das'
+// };
 
-console.log(familyDetails);
+// console.log(familyDetails);
+
+// function studentDetails():string{
+//     return 'This is student details';
+// }
+
