@@ -112,10 +112,49 @@
 
 
 
-//Union type
-function kgToLbs(weight:string | number): number 
-{
-    if(typeof(weight)=='string')
-        return parseInt(weight    )
+// //Union type
+// function kgToLbs(weight:string | number): number 
+// {
+//     if(typeof(weight)=='string')
+//         return parseInt(weight)*2.2;
+//     else
+//         return weight*2.2;
+// }
+
+
+
+// //intersection type
+// type Draggabe={
+//     drag:()=> void;
+// }
+
+// type Resizable={
+//     resize:()=>void;
+// }
+
+// type employeePhoto = Draggabe & Resizable;
+
+// let newEmpPhoto : employeePhoto={
+//     drag: ()=>{},
+//     resize: ()=> {}
+// };
+
+
+// type Quantity= 100 | 50;
+
+// let newQuantity: Quantity=100;
+
+type  Customer={
+    birthDay: Date
+}
+
+function getCustomer(id : number): Customer | null | undefined{
+    return id===null? null: {birthDay : new Date()}    
 
 }
+
+let customer =getCustomer(10);
+if(customer!==null && customer!=undefined)
+console.log(customer.birthDay);
+
+
