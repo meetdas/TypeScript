@@ -158,21 +158,67 @@
 // console.log(customer.birthDay);
 
 
-class Account {
-    id: number;
+// class Account {
+//     id: number;
+//     owner: string;
+//     balance: number;
+
+
+//     constructor(id:number, owner: string, balance: number){
+//         this.id = id;
+//         this.owner=owner;
+//         this.balance=balance; 
+//     }
+
+//      Deposite (amount:number):void{
+//         if(amount<=0)
+//             throw new Error('Invalid amount');
+//         this.balance+=amount; 
+//     }
+// }
+
+class Account{
+    readonly id: number;
     owner: string;
-    balance: number;
+    private _balance: number;
 
-
-    constructor(id:number, owner: string, balance: number){
-        this.id = id;
+    constructor (id: number, owner: string, balance: number){
+        this.id= id;
         this.owner=owner;
-        this.balance=balance; 
+        this._balance=balance;
     }
 
-     Deposite (amount:number):void{
+    Deposite(amount: number) :void{
         if(amount<=0)
-            throw new Error('Invalid amount');
-        this.balance+=amount; 
+            throw new Error('Amount is invilid');
+        this._balance+= amount;
     }
+
+    get balance():number{
+        return this._balance;
+    }
+
+    set balance(value : number){
+        if(value!==null)
+        this._balance=value;
+    }
+
 }
+
+
+let account = new Account( 10, 'Nato Das', 12000)
+account.Deposite(10);
+console.log(account.balance)
+
+
+
+
+// //Parameter properties
+// class Student{
+
+//     constructor(public readonly id:number, public name:string){
+
+//     }
+// }
+
+// let student= new Student(10,'nato das');
