@@ -90,3 +90,32 @@
 // };
 
 // newStudentDetails.name='skjfhkjf';
+
+
+
+
+// //type object
+// type Employee ={
+//     id:number,
+//     name:string,
+//     address: string
+// };
+
+
+// let newEmployee : Employee={
+//     id:3,
+//     name:'kjdfljkls',
+//     address:'ksjhdfkhs'
+// };
+
+// console.log(newEmployee);
+
+
+
+//Union type
+function kgToLbs(weight:string | number): number 
+{
+    if(typeof(weight)=='string')
+        return parseInt(weight    )
+
+}

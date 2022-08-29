@@ -1,7 +1,8 @@
 "use strict";
-let familyDetails = {
-    id: 1,
-    name: 'Nato Das'
+let newEmployee = {
+    id: 3,
+    name: 'kjdfljkls',
+    address: 'ksjhdfkhs'
 };
-console.log(familyDetails);
+console.log(newEmployee);
 //# sourceMappingURL=index.js.map
