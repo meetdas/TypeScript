@@ -144,17 +144,35 @@
 
 // let newQuantity: Quantity=100;
 
-type  Customer={
-    birthDay: Date
+// type  Customer={
+//     birthDay: Date
+// }
+
+// function getCustomer(id : number): Customer | null | undefined{
+//     return id===null? null: {birthDay : new Date()}    
+
+// }
+
+// let customer =getCustomer(10);
+// if(customer!==null && customer!=undefined)
+// console.log(customer.birthDay);
+
+
+class Account {
+    id: number;
+    owner: string;
+    balance: number;
+
+
+    constructor(id:number, owner: string, balance: number){
+        this.id = id;
+        this.owner=owner;
+        this.balance=balance; 
+    }
+
+     Deposite (amount:number):void{
+        if(amount<=0)
+            throw new Error('Invalid amount');
+        this.balance+=amount; 
+    }
 }
-
-function getCustomer(id : number): Customer | null | undefined{
-    return id===null? null: {birthDay : new Date()}    
-
-}
-
-let customer =getCustomer(10);
-if(customer!==null && customer!=undefined)
-console.log(customer.birthDay);
-
-

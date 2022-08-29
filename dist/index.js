@@ -1,8 +1,14 @@
 "use strict";
-function getCustomer(id) {
-    return id === null ? null : { birthDay: new Date() };
+class Account {
+    constructor(id, owner, balance) {
+        this.id = id;
+        this.owner = owner;
+        this.balance = balance;
+    }
+    Deposite(amount) {
+        if (amount <= 0)
+            throw new Error('Invalid amount');
+        this.balance += amount;
+    }
 }
-let customer = getCustomer(10);
-if (customer !== null && customer != undefined)
-    console.log(customer.birthDay);
 //# sourceMappingURL=index.js.map
