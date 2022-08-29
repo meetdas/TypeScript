@@ -68,25 +68,25 @@
 
 
 
-//Narrowing
-function bodyDetails( weight: string | number): number {
-        if(typeof weight==='number')
-        return weight*2;
-        else 
-        return parseInt(weight)*2.2;
-    }
+// //Narrowing
+// function bodyDetails( weight: string | number): number {
+//         if(typeof weight==='number')
+//         return weight*2;
+//         else 
+//         return parseInt(weight)*2.2;
+//     }
 
-//
-type studentDetails ={
-    id: number,
-    name:string,
-    phone:string
-}
+// //
+// type studentDetails ={
+//     id: number,
+//     name:string,
+//     phone:string
+// }
 
-let newStudentDetails : studentDetails = {
-        id : 12,
-        name : 'nato',
-        phone: 'ui489438943'
-};
+// let newStudentDetails : studentDetails = {
+//         id : 12,
+//         name : 'nato',
+//         phone: 'ui489438943'
+// };
 
-newStudentDetails.name='skjfhkjf';
+// newStudentDetails.name='skjfhkjf';
