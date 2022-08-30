@@ -177,38 +177,39 @@
 //     }
 // }
 
-class Account{
-    readonly id: number;
-    owner: string;
-    private _balance: number;
+// class Account{
+//     readonly id: number;
+//     owner: string;
+//     private _balance: number;
 
-    constructor (id: number, owner: string, balance: number){
-        this.id= id;
-        this.owner=owner;
-        this._balance=balance;
-    }
+//     constructor (id: number, owner: string, balance: number){
+//         this.id= id;
+//         this.owner=owner;
+//         this._balance=balance;
+//     }
 
-    Deposite(amount: number) :void{
-        if(amount<=0)
-            throw new Error('Amount is invilid');
-        this._balance+= amount;
-    }
+//     Deposite(amount: number) :void{
+//         if(amount<=0)
+//             throw new Error('Amount is invilid');
+//         this._balance+= amount;
+//     }
+// //getter
+//     get balance():number{
+//         return this._balance;
+//     }
 
-    get balance():number{
-        return this._balance;
-    }
+//     //setter
+//     set balance(value : number){
+//         if(value!==null)
+//         this._balance=value;
+//     }
 
-    set balance(value : number){
-        if(value!==null)
-        this._balance=value;
-    }
-
-}
+// }
 
 
-let account = new Account( 10, 'Nato Das', 12000)
-account.Deposite(10);
-console.log(account.balance)
+// let account = new Account( 10, 'Nato Das', 12000)
+// account.Deposite(10);
+// console.log(account.balance)
 
 
 
@@ -222,3 +223,55 @@ console.log(account.balance)
 // }
 
 // let student= new Student(10,'nato das');
+
+
+// //index parameter
+// class indexSignature{
+//      [seat: string] :string;
+// }
+
+// let newIndexSignature= new indexSignature;
+// newIndexSignature.A1='Nato Das';
+// newIndexSignature.A2='Rantu Das';
+
+
+// //static Method
+// class Ride{
+//     private static _activeRide: number=0;
+//     start(){Ride._activeRide++}
+//     stop(){Ride._activeRide--} 
+
+//    static get activeRide(){
+//         return Ride._activeRide;
+//     }
+// }
+
+// let ride = new Ride;
+// ride.start();
+
+// let ride1 = new Ride;
+// ride1.start();
+
+// console.log(Ride.activeRide);
+
+
+
+
+
+//Inheritance
+class Person{
+    constructor(public firstName: string, public lastName: string){}
+        get fullName() {
+            return this.firstName + ' ' + this.lastName;
+        }
+
+        walk(){
+            console.log('Walking...');
+        }
+    }
+
+class Employee extends Person{
+    constructor(id : number, firstName: string, lastName: string){
+        super(firstName, lastName);
+    }
+}

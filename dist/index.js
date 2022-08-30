@@ -1,17 +1,15 @@
 "use strict";
-class Account {
-    constructor(id, owner, balance) {
-        this.id = id;
-        this.owner = owner;
-        this.balance = balance;
-    }
-    Deposite(amount) {
-        if (amount <= 0)
-            throw new Error('Amount is invilid');
-        this.balance += amount;
+class Ride {
+    start() { Ride._activeRide++; }
+    stop() { Ride._activeRide--; }
+    static get activeRide() {
+        return Ride._activeRide;
     }
 }
-let account = new Account(10, 'Nato Das', 12000);
-account.Deposite(10);
-console.log(account.balance);
+Ride._activeRide = 0;
+let ride = new Ride;
+ride.start();
+let ride1 = new Ride;
+ride1.start();
+console.log(Ride.activeRide);
 //# sourceMappingURL=index.js.map
