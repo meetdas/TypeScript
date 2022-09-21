@@ -271,7 +271,13 @@ class Person{
     }
 
 class Employee extends Person{
-    constructor(id : number, firstName: string, lastName: string){
-        super(firstName, lastName);
+    
+        override get fullName(){
+            return 'Prof. ' + super.fullName;
+        }
+        // super(firstName, lastName);
     }
-}
+
+
+
+
